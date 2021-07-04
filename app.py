@@ -16,6 +16,27 @@ class MainLoop(QMainWindow, FORM_CLASS):
         super(MainLoop, self).__init__(parent)
         QMainWindow.__init__(self)
         self.setupUi(self)
+        self.ui_handler()
+        self.buttons_handler()
+
+    def ui_handler(self):
+        self.setWindowTitle("S7S Downloader")
+
+    def buttons_handler(self):
+        self.pushButton_2.clicked.connect(self.download)
+        self.pushButton.clicked.connect(self.browse_handler)
+        self.pushButton_3.clicked.connect(quit)
+
+    def browse_handler(self):
+        pass
+
+    def progress_handler(self):
+        pass
+
+    def download(self):
+        url = self.lineEdit.text()
+        location = self.lineEdit_2.text()
+        
 
 
 def main():

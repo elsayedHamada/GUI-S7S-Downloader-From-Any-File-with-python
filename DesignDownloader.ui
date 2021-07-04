@@ -81,7 +81,6 @@ font-size: 15px;</string>
 border-radius: 10px;
 font-size: 15px;
 font-family: poppins,sans-serif;
-box-shadow: 30px rgb(0, 0, 0);
 padding-left: 7px;</string>
     </property>
     <property name="placeholderText">
@@ -128,7 +127,6 @@ color: white;
 font-family: poppins, sans-serif;
 font-weight: Medium;
 font-size: 12px;
-cursor: pointer;	
 }
 
 QPushButton:hover{
@@ -188,7 +186,6 @@ color: white;
 font-family: poppins, sans-serif;
 font-weight: Medium;
 font-size: 12px;
-cursor: pointer;	
 }
 
 QPushButton:hover{
@@ -219,7 +216,6 @@ color: white;
 font-family: poppins, sans-serif;
 font-weight: Medium;
 font-size: 12px;
-cursor: pointer;	
 }
 
 QPushButton:hover{
