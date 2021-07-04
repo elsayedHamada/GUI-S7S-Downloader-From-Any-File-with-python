@@ -13,7 +13,7 @@ FORM_CLASS, _ = loadUiType(os.path.join(os.path.dirname(__file__), "DesignDownlo
 # create the main loop
 class MainLoop(QMainWindow, FORM_CLASS):
     def __init__(self, parent=None):
-        super(MainLoop).__init(parent)
+        super(MainLoop, self).__init__(parent)
         QMainWindow.__init__(self)
         self.setupUi(self)
 
