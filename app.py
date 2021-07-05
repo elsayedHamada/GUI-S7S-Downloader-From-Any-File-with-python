@@ -30,13 +30,24 @@ class MainLoop(QMainWindow, FORM_CLASS):
     def browse_handler(self):
         pass
 
-    def progress_handler(self):
-        pass
+    def progress_handler(self, blocknum, blocksize, totalsize):
+        downloaded_size = blocknum * blocksize
+        percent = downloaded_size * 100 / totalsize
+        self.progressBar.setValue(int(percent))
+        QApplication.processEvents()
 
     def download(self):
         url = self.lineEdit.text()
         location = self.lineEdit_2.text()
-        
+        try:
+            urllib.request.urlretrieve(url, location, self.progress_handler)
+            QMessageBox.information(self, "S7S Downloader", f"Download Completed\n save to >> {location}")
+        except Exception:
+            QMessageBox.warning(self, "S7S Downloader", "Check If the Url Or The Loocation Is Not Right.")
+            
+        self.progressBar.setValue(0)
+        self.lineEdit.setText("")
+        self.lineEdit_2.setText("")
 
 
 def main():
@@ -48,3 +59,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# D:\Coding\Python\Python_Projects\Remake\S7S Downloader\setup.exe
+# https://download.sublimetext.com/sublime_text_build_4107_x64_setup.exe
