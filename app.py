@@ -28,7 +28,9 @@ class MainLoop(QMainWindow, FORM_CLASS):
         self.pushButton_3.clicked.connect(quit)
 
     def browse_handler(self):
-        pass
+        save_location = str(QFileDialog.getSaveFileName(self, caption="Save To", directory=".", filter="All files (*.*"))
+        text_location = save_location[2:].split(",")[0][0:-1]
+        self.lineEdit_2.setText(text_location)
 
     def progress_handler(self, blocknum, blocksize, totalsize):
         downloaded_size = blocknum * blocksize
