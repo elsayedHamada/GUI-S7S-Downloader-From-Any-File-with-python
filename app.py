@@ -47,7 +47,9 @@ class MainLoop(QMainWindow, FORM_CLASS):
 
     def download(self):
         url = self.lineEdit.text()
-        location = self.lineEdit_2.text()
+        name= self.lineEdit_3.text()
+        file_type = self.lineEdit_4.text()
+        location = f"{self.lineEdit_2.text()}/{name}.{file_type}"
         try:
             urllib.request.urlretrieve(url, location, self.progress_handler)
             QMessageBox.information(self, "S7S Downloader", f"Download Completed\n save to >> {location}")
@@ -57,6 +59,8 @@ class MainLoop(QMainWindow, FORM_CLASS):
         self.progressBar.setValue(0)
         self.lineEdit.setText("")
         self.lineEdit_2.setText("")
+        self.lineEdit_3.setText("")
+        self.lineEdit_4.setText("")
 
 
 def main():
