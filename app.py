@@ -1,4 +1,5 @@
 # Import needed modules 
+from PyQt5 import QtGui
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore
@@ -9,7 +10,7 @@ import sys
 import urllib.request
 
 # load the UI file
-FORM_CLASS, _ = loadUiType(os.path.join(os.path.dirname(__file__), "DesignDownloader.ui"))
+FORM_CLASS, _ = loadUiType(os.path.join(os.path.dirname(__file__), "assets/DesignDownloader.ui"))
 
 # create the main loop
 class MainLoop(QMainWindow, FORM_CLASS):
@@ -24,6 +25,7 @@ class MainLoop(QMainWindow, FORM_CLASS):
 
     def ui_handler(self):
         self.setWindowTitle("S7S Downloader")
+        self.setWindowIcon(QtGui.QIcon("assets/down-arrow.png"))
 
     def buttons_handler(self):
         self.pushButton_2.clicked.connect(self.download)
@@ -72,6 +74,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# D:\Coding\Python\Python_Projects\Remake\S7S Downloader\setup.exe
-# https://download.sublimetext.com/sublime_text_build_4107_x64_setup.exe

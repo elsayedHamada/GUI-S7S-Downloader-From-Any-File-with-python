@@ -36,7 +36,7 @@ border-radius: 15px;</string>
      <rect>
       <x>330</x>
       <y>20</y>
-      <width>261</width>
+      <width>256</width>
       <height>51</height>
      </rect>
     </property>
@@ -266,8 +266,39 @@ padding-left: 7px;</string>
      <string comment="10">File Type : exe, png, jpg, etc....</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>30</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>down-icon.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>30</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>down-icon.png</pixmap>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
-   <zorder>label</zorder>
    <zorder>lineEdit</zorder>
    <zorder>lineEdit_2</zorder>
    <zorder>pushButton</zorder>
@@ -276,6 +307,9 @@ padding-left: 7px;</string>
    <zorder>pushButton_3</zorder>
    <zorder>lineEdit_3</zorder>
    <zorder>lineEdit_4</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label</zorder>
   </widget>
  </widget>
  <resources/>
