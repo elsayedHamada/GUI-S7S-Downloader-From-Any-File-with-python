@@ -1,10 +1,11 @@
 # Import needed modules 
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
 from PyQt5.QtCore import *
+from PyQt5 import QtCore
+from PyQt5.QtGui import *
 from PyQt5.uic import *
-import sys
 import os
+import sys
 import urllib.request
 
 # load the UI file
@@ -16,6 +17,8 @@ class MainLoop(QMainWindow, FORM_CLASS):
         super(MainLoop, self).__init__(parent)
         QMainWindow.__init__(self)
         self.setupUi(self)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.ui_handler()
         self.buttons_handler()
 
@@ -28,9 +31,13 @@ class MainLoop(QMainWindow, FORM_CLASS):
         self.pushButton_3.clicked.connect(quit)
 
     def browse_handler(self):
-        save_location = str(QFileDialog.getSaveFileName(self, caption="Save To", directory=".", filter="All files (*.*"))
+        # Hard Way
+        ''' save_location = str(QFileDialog.getSaveFileName(self, caption="Save to", directory=".", filter="All Files (*.*)"))
         text_location = save_location[2:].split(",")[0][0:-1]
-        self.lineEdit_2.setText(text_location)
+        self.lineEdit_2.setText(text_location)'''
+        # Easy Way
+        location = QFileDialog.getExistingDirectory(self, "Save Location")
+        self.lineEdit_2.setText(location)
 
     def progress_handler(self, blocknum, blocksize, totalsize):
         downloaded_size = blocknum * blocksize

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>946</width>
-    <height>499</height>
+    <height>560</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
      <x>30</x>
      <y>40</y>
      <width>891</width>
-     <height>411</height>
+     <height>491</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -141,7 +141,7 @@ QPushButton:hover{
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>280</y>
+      <y>350</y>
       <width>651</width>
       <height>23</height>
      </rect>
@@ -170,7 +170,7 @@ QProgressBar::chunk {
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>330</y>
+      <y>400</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -226,6 +226,46 @@ QPushButton:hover{
      <string>X</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>270</y>
+      <width>320</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+border-radius: 10px;
+font-size: 15px;
+font-family: poppins,sans-serif;
+padding-left: 7px;</string>
+    </property>
+    <property name="placeholderText">
+     <string comment="10">File Name</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>270</y>
+      <width>320</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+border-radius: 10px;
+font-size: 15px;
+font-family: poppins,sans-serif;
+padding-left: 7px;</string>
+    </property>
+    <property name="placeholderText">
+     <string comment="10">File Type : exe, png, jpg, etc....</string>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>label</zorder>
    <zorder>lineEdit</zorder>
@@ -234,6 +274,8 @@ QPushButton:hover{
    <zorder>progressBar</zorder>
    <zorder>pushButton_2</zorder>
    <zorder>pushButton_3</zorder>
+   <zorder>lineEdit_3</zorder>
+   <zorder>lineEdit_4</zorder>
   </widget>
  </widget>
  <resources/>
